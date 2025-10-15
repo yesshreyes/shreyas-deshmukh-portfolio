@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= name %> - Portfolio</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <!-- Glassmorphic Navigation -->
+    <nav class="glass-nav" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon material-icons">android</span>
+                Manifesting Apps
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text reveal-left">
+                <div class="status-badge glass-card">
+                    <span class="status-dot"></span>
+                    Available for opportunities
+                </div>
+                <h1 class="glitch" data-text="<%= name %>"><%= name %></h1>
+                <h2 class="gradient-text typing-text"><%= title %></h2>
+                <p class="hero-subtitle"><%= subtitle %></p>
+                <p class="hero-description"><%= description %></p>
+                
+                <div class="hero-tech">
+                    <span class="tech-badge glass-card">Kotlin</span>
+                    <span class="tech-badge glass-card">Jetpack Compose</span>
+                    <span class="tech-badge glass-card">Android SDK</span>
+                </div>
+                
+                <div class="hero-buttons">
+                    <a href="#portfolio" class="btn btn-primary glass-card">
+                        <i class="fas fa-code"></i>
+                        <span>View Projects</span>
+                        <div class="btn-shine"></div>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary glass-card">
+                        <i class="fas fa-envelope"></i>
+                        <span>Get in Touch</span>
+                    </a>
+                </div>
+                
+                <div class="social-links">
+                    <a href="<%= github %>" class="social-icon glass-card" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="<%= linkedin %>" class="social-icon glass-card" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="<%= googleDev %>" class="social-icon glass-card" target="_blank">
+                        <i class="fab fa-google"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-image reveal-right">
+                <div class="profile-card glass-card floating">
+                    <div class="profile-image">
+                        <img src="<%= mobileDev %>" alt="<%= name %>">
+                    </div>
+                    <div class="code-lines">
+                        <span class="code-line"></span>
+                        <span class="code-line"></span>
+                        <span class="code-line"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <p>Scroll Down</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section-padding">
+        <div class="container">
+            <div class="section-header reveal-top">
+                <span class="section-tag glass-card">About Me</span>
+                <h2 class="section-title">Turning concepts into <span class="highlight">powerful Android experiences!</span></h2>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-image reveal-scale">
+                    <div class="profile-circle glass-card">
+                        <div class="rotating-border"></div>
+                        <div class="profile-pic">
+                            <img src="<%= profileImage %>" alt="<%= name %>">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-text reveal-fade">
+                    <div class="glass-card about-card">
+                        <h3>Hello, I'm <span class="highlight"><%= name %></span></h3>
+                        <p class="about-description">          
+                            Soon-to-be Computer Science graduate passionate about building software solutions. With hands-on experience as an android
+                            intern working on Kotlin-based development, I enjoy solving problems and exploring new technologies. Eager to join a dynamic
+                            engineering team as a Junior Software Developer, contributing to both mobile and general software development initiatives.
+                        </p>
+                        <div class="skills-tags">
+                            <span class="skill-tag glass-card">Kotlin</span>
+                            <span class="skill-tag glass-card">Jetpack Compose</span>
+                            <span class="skill-tag glass-card">Android SDK</span>
+                            <span class="skill-tag glass-card">Firebase</span>
+                            <span class="skill-tag glass-card">Java</span>
+                        </div>
+                        <div class="about-buttons">
+                            <a href="<%= resumePath %>" class="btn btn-primary glass-card" download="Resume.pdf">
+                                <i class="fas fa-download"></i>
+                                Download CV
+                            </a>
+                            <a href="#portfolio" class="btn btn-secondary glass-card">
+                                <i class="fas fa-eye"></i>
+                                View Work
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tech Stack Section -->
+            <section id="techstack" class="techstack section-padding">
+                <div class="container">
+                    <div class="section-header reveal-top">
+                        <span class="section-tag glass-card">Technologies</span>
+                        <h2 class="section-title">My <span class="highlight">Tech Stack</span></h2>
+                        <p class="section-subtitle">Tools and technologies I work with</p>
+                    </div>
+                    
+                    <div class="tech-grid">
+                        <!-- Kotlin -->
+                        <div class="tech-item glass-card reveal-scale">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="Kotlin">
+                            <p>Kotlin</p>
+                        </div>
+                        
+                        <!-- Android -->
+                        <div class="tech-item glass-card reveal-scale">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg" alt="Android">
+                            <p>Android</p>
+                        </div>
+                        
+                        <!-- Jetpack Compose -->
+                        <div class="tech-item glass-card reveal-scale">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jetpackcompose/jetpackcompose-original.svg" alt="Jetpack Compose">
+                            <p>Jetpack Compose</p>
+                        </div>
+                        
+                        <!-- Firebase -->
+                        <div class="tech-item glass-card reveal-scale">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase">
+                            <p>Firebase</p>
+                        </div>
+                        
+                        <!-- Git -->
+                        <div class="tech-item glass-card reveal-scale">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+                            <p>Git</p>
+                        </div>
+                        
+                        <!-- Java -->
+                        <div class="tech-item glass-card reveal-scale">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+                            <p>Java</p>
+                        </div>
+                        
+                        <!-- Android Studio -->
+                        <div class="tech-item glass-card reveal-scale">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg" alt="Android Studio">
+                            <p>Android Studio</p>
+                        </div>
+                        
+                        <!-- Python -->
+                        <div class="tech-item glass-card reveal-scale">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                            <p>Python</p>
+                        </div>
+                        
+                        <!-- Figma -->
+                        <div class="tech-item glass-card reveal-scale">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma">
+                            <p>Figma</p>
+                        </div>
+                        
+                        <!-- Canva -->
+                        <div class="tech-item glass-card reveal-scale">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" alt="Canva">
+                            <p>Canva</p>
+                        </div>
+
+                        <!-- Kotlin Multiplatform -->
+                        <div class="tech-item glass-card reveal-scale">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="Kotlin Multiplatform">
+                            <p>Kotlin Multiplatform</p>
+                        </div>
+
+                        <!-- MySQL -->
+                        <div class="tech-item glass-card reveal-scale">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
+                            <p>MySQL</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section-padding">
+        <div class="container">
+            <div class="section-header reveal-top">
+                <span class="section-tag glass-card">My Work</span>
+                <h2 class="section-title">Portfolio <span class="highlight">Showcase</span></h2>
+                <p class="section-subtitle">Explore my journey through projects and technical expertise</p>
+            </div>
+            
+            <div class="portfolio-tabs">
+                <button class="tab-btn glass-card" data-tab="mobile">
+                    <i class="fas fa-mobile-alt"></i> Mobile
+                </button>
+                <button class="tab-btn glass-card" data-tab="other">
+                    <i class="fas fa-code"></i> Other
+                </button>
+                <button class="tab-btn glass-card" data-tab="certification">
+                    <i class="fas fa-certificate"></i> Certifications
+                </button>
+                <button class="tab-btn glass-card" data-tab="articles">
+                    <i class="fas fa-newspaper"></i> Articles
+                </button>
+            </div>
+            
+            <!-- Projects Grid -->
+            <div class="projects-grid">
+                <!-- MOBILE PROJECTS -->
+
+                <!-- Learning Curve App -->
+                <div class="project-card glass-card reveal-scale" data-category="mobile">
+                    <div class="project-info">
+                        <span class="project-tag">Mobile App</span>
+                        <h3>Learning Curve</h3>
+                        <p>Built a course recommendation app analyzing 500+ Coursera courses. Integrated Firebase for authentication, Firestore database, and Gemini AI chatbot with clean architecture.</p>
+                        <div class="project-tech">
+                            <span>Kotlin</span>
+                            <span>Jetpack Compose</span>
+                            <span>Firebase</span>
+                            <span>Android Studio</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/yesshreyes/learning-curve/releases/tag/v0.1.0" download class="btn btn-primary glass-card">
+                                <i class="fas fa-download"></i> Download APK
+                            </a>
+                            <a href="https://github.com/yesshreyes/learning-curve" target="_blank" class="btn btn-secondary glass-card">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- One Badge App -->
+                <div class="project-card glass-card reveal-scale" data-category="mobile">
+                    <div class="project-info">
+                        <span class="project-tag">Mobile App</span>
+                        <h3>One Badge</h3>
+                        <p>Android app for football fans to follow their favorite team. Features interactive swipe-card UI with animations, gradient themes, and real-time data via Retrofit with Room Database for offline caching.</p>
+                        <div class="project-tech">
+                            <span>Kotlin</span>
+                            <span>Jetpack Compose</span>
+                            <span>Firebase</span>
+                            <span>Retrofit</span>
+                            <span>Room DB</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/yesshreyes/one-badge/releases/download/v0.1.0/v0.1.0release.apk" download class="btn btn-primary glass-card">
+                                <i class="fas fa-download"></i> Download APK
+                            </a>
+                            <a href="https://github.com/yesshreyes/one-badge" target="_blank" class="btn btn-secondary glass-card">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kotlin Dictionary App -->
+                <div class="project-card glass-card reveal-scale" data-category="mobile">
+                    <div class="project-info">
+                        <span class="project-tag">Mobile App</span>
+                        <h3>Kotlin Dictionary (<a href="https://developersbreach.com/" target="_blank" class="dev-breach-link">Developers Breach</a>)</h3>
+                        <p>Contributed to an educational Android app for learning Kotlin through technical content and quizzes. Used AI tools to automate content generation with clean architecture and modular code structure.</p>
+                        <div class="project-tech">
+                            <span>Kotlin Multiplatform</span>
+                            <span>Jetpack Compose</span>
+                            <span>Android Studio</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/DevelopersBreach/kotlin-dictionary-multiplatform/releases/download/v0.1.0/app-release-v0.1.0.apk" download class="btn btn-primary glass-card">
+                                <i class="fas fa-download"></i> Download APK
+                            </a>
+                            <a href="https://github.com/DevelopersBreach/kotlin-dictionary-multiplatform" target="_blank" class="btn btn-secondary glass-card">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- OTHER PROJECTS
+                <div class="project-card glass-card reveal-scale" data-category="other">
+                    <div class="project-info">
+                        <span class="project-tag">Other Project</span>
+                        <h3>Your Other Project</h3>
+                        <p>Description of your other project goes here. Add details about what you built, the problem it solves, and the technologies used.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>JavaScript</span>
+                            <span>React</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="#" class="btn btn-primary glass-card" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="#" class="btn btn-secondary glass-card" target="_blank">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div> -->
+
+
+                <!-- CERTIFICATIONS -->
+                
+                <!-- Google Play Academy -->
+                <div class="cert-card glass-card reveal-scale" data-category="certification">
+                    <div class="cert-icon">
+                        <i class="fab fa-google-play"></i>
+                    </div>
+                    <h3>Google Play Academy</h3>
+                    <p>Store Listing Certificate</p>
+                    <span class="cert-date">Oct 2025 - Oct 2028</span>
+                    <a href="https://www.credential.net/5b72773e-3b7a-4056-80a0-7713270f2b2a#acc.gIHiaw2U" target="_blank" class="btn btn-primary glass-card cert-btn">
+                        <i class="fas fa-external-link-alt"></i> View Certificate
+                    </a>
+                </div>
+
+                <!-- Prompt Engineering -->
+                <div class="cert-card glass-card reveal-scale" data-category="certification">
+                    <div class="cert-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Prompt Engineering for ChatGPT</h3>
+                    <p>Vanderbilt University</p>
+                    <span class="cert-date">Issued Jul 2023</span>
+                    <a href="https://www.linkedin.com/redir/redirect/?url=https%3A%2F%2Fcoursera.org%2Fshare%2F09d318bc2d108a0082b52f84b6525de5&urlhash=6xX2&isSdui=true&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3B5bl9N1zNRXKxr%2BBUTmmEmw%3D%3D" target="_blank" class="btn btn-primary glass-card cert-btn">
+                        <i class="fas fa-external-link-alt"></i> View Certificate
+                    </a>
+                </div>
+
+                <!-- Java -->
+                <div class="cert-card glass-card reveal-scale" data-category="certification">
+                    <div class="cert-icon">
+                        <i class="fab fa-java"></i>
+                    </div>
+                    <h3>Introduction to Java</h3>
+                    <p>LearnQuest</p>
+                    <span class="cert-date">Issued Mar 2023</span>
+                    <a href="https://www.linkedin.com/redir/redirect/?url=https%3A%2F%2Fcoursera.org%2Fshare%2F4a1deee9cf1d222b1e2a9d29c0c1ca76&urlhash=rpjl&isSdui=true&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3B5bl9N1zNRXKxr%2BBUTmmEmw%3D%3D" target="_blank" class="btn btn-primary glass-card cert-btn">
+                        <i class="fas fa-external-link-alt"></i> View Certificate
+                    </a>
+                </div>
+
+                <!-- Management -->
+                <div class="cert-card glass-card reveal-scale" data-category="certification">
+                    <div class="cert-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Fundamentals of Management</h3>
+                    <p>University of California, Irvine | Coursera</p>
+                    <span class="cert-date">Issued May 2023</span>
+                    <a href="https://www.linkedin.com/redir/redirect/?url=https%3A%2F%2Fcoursera.org%2Fshare%2F9e64dd331c84ed999d5cf65382779421&urlhash=bDft&isSdui=true&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3B5bl9N1zNRXKxr%2BBUTmmEmw%3D%3D" target="_blank" class="btn btn-primary glass-card cert-btn">
+                        <i class="fas fa-external-link-alt"></i> View Certificate
+                    </a>
+                </div>
+
+                <!-- ARTICLES -->
+                
+                <!-- Ktlint Article -->
+                <div class="article-card glass-card reveal-scale" data-category="articles">
+                    <div class="article-image">
+                        <img src="/images/ktlint-article.png" alt="Ktlint Article">
+                        <div class="article-overlay">
+                            <i class="fas fa-external-link-alt"></i>
+                        </div>
+                    </div>
+                    <div class="article-info">
+                        <span class="article-tag">Technical Writing</span>
+                        <h3>Ktlint - The Ultimate Guide to Kotlin Code Formatting</h3>
+                        <p>Comprehensive guide on using Ktlint for maintaining consistent Kotlin code formatting across projects.</p>
+                        <a href="https://developersbreach.com/ktlint-ultimate-kotlin-code-formatting/" target="_blank" class="btn btn-primary glass-card">
+                            <i class="fas fa-book-open"></i> Read Article
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Compose Testing Article -->
+                <div class="article-card glass-card reveal-scale" data-category="articles">
+                    <div class="article-image">
+                        <img src="/images/compose-testing-article.png" alt="Compose Testing Article">
+                        <div class="article-overlay">
+                            <i class="fas fa-external-link-alt"></i>
+                        </div>
+                    </div>
+                    <div class="article-info">
+                        <span class="article-tag">Technical Writing</span>
+                        <h3>Compose Screenshot Testing with CI/CD Integration</h3>
+                        <p>In-depth tutorial on implementing screenshot testing for Jetpack Compose with continuous integration pipelines.</p>
+                        <a href="https://developersbreach.com/compose-screenshot-testing-setup-integration/" target="_blank" class="btn btn-primary glass-card">
+                            <i class="fas fa-book-open"></i> Read Article
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section-padding">
+        <div class="container">
+            <div class="section-header reveal-top">
+                <span class="section-tag glass-card">Get In Touch</span>
+                <h2 class="section-title">Let's Work <span class="highlight">Together</span></h2>
+                <p class="section-subtitle">Have a project in mind? Let's create something amazing!</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-form-wrapper reveal-left">
+                    <form class="contact-form glass-card" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="a5c25cc8-63dd-464c-8794-b916e8701cd9">
+                        
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">    
+
+                        <div class="ohnohoney" style="position: absolute; left: -9999px;">
+                            <label for="website">Website</label>
+                            <input type="text" name="website" id="website" tabindex="-1" autocomplete="off">
+                        </div>
+
+                        <div class="form-group">
+                            <label><i class="fas fa-user"></i> Your Name</label>
+                            <input type="text" name="name" placeholder="John Doe" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label><i class="fas fa-envelope"></i> Your Email</label>
+                            <input type="email" name="email" placeholder="john@example.com" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label><i class="fas fa-comment"></i> Your Message</label>
+                            <textarea name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary glass-card">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                            <div class="btn-shine"></div>
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="contact-info reveal-right">
+                    
+                    <div class="info-card glass-card">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h4>Location</h4>
+                        <p>Hyderabad, India</p>
+                    </div>
+                    
+                    <div class="social-connect glass-card">
+                        <h4>Connect With Me</h4>
+                        <div class="social-grid">
+                            <a href="mailto:shreyesdeshmuk03@gmail.com" class="social-card glass-card">
+                                <i class="fas fa-envelope"></i>
+                                <span>Email</span>
+                            </a>
+                            <a href="<%= linkedin %>" class="social-card glass-card">
+                                <i class="fab fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="<%= github %>" class="social-card glass-card">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="<%= googleDev %>" class="social-card glass-card">
+                                <i class="fab fa-google"></i>
+                                <span>Google Dev</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer glass-card">
+        <div class="container">
+            <p>&copy; 2025 <%= name %>. Crafted with <i class="fas fa-heart"></i> and lots of coffee</p>
+        </div>
+    </footer>
+
+    <!-- GSAP Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+</html>
