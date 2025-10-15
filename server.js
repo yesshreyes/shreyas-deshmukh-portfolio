@@ -15,9 +15,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', (req, res) => {
     res.render('index', {
         name: 'Shreyas Deshmukh',
-        title: 'Android Developer',
+        title: 'Engineering student',
         subtitle: 'Final-year Student',
-        description: 'Android Kotlin Developer specializing in Jetpack Compose, and building scalable mobile applications with modern architecture patterns!',
+        description: 'Guess what? I love building mobile apps!',
         email: 'shreyesdeshmuk03@gmail.com',
         github: 'https://github.com/yesshreyes',
         linkedin: 'https://www.linkedin.com/in/shreyas-deshmukh-917b8020b/',
