@@ -26,6 +26,8 @@
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link active">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#techstack" class="nav-link">Tech Stack</a></li>
+                <li><a href="#opensource" class="nav-link">Open Source</a></li>
                 <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
@@ -47,13 +49,16 @@
                 </div>
                 <h1 class="glitch" data-text="<%= name %>"><%= name %></h1>
                 <h2 class="gradient-text typing-text"><%= title %></h2>
-                <p class="hero-subtitle"><%= subtitle %></p>
+                <!-- <p class="hero-subtitle"><%= subtitle %></p> -->
                 <p class="hero-description"><%= description %></p>
                 
                 <div class="hero-tech">
-                    <span class="tech-badge glass-card">Kotlin</span>
-                    <span class="tech-badge glass-card">Jetpack Compose</span>
-                    <span class="tech-badge glass-card">Android SDK</span>
+                    <span class="tech-badge glass-card">Android Development</span>
+                    <span class="tech-badge glass-card">Open Source Contribution</span>
+                    <span class="tech-badge glass-card">Graphic Design</span>
+                    <span class="tech-badge glass-card">Technical Writing</span>
+                    <span class="tech-badge glass-card">Football</span>
+                    <span class="tech-badge glass-card">GDG Campus Lead'25</span>
                 </div>
                 
                 <div class="hero-buttons">
@@ -237,6 +242,29 @@
         </div>
     </section>
 
+    <!-- GitHub Contributions Section -->
+    <section id="opensource" class="opensource section-padding">
+        <div class="container">
+            <div class="section-header reveal-top">
+                <span class="section-tag glass-card">Open Source</span>
+                <h2 class="section-title">Contribution <span class="highlight">Activity</span></h2>
+            </div>
+
+            <!-- GitHub Contribution Graph -->
+            <div class="contribution-graph-wrapper reveal-scale">
+                <div class="github-graph glass-card">
+                    <img src="https://ghchart.rshah.org/yesshreyes" alt="Shreyas's GitHub Contribution Graph">
+                </div>
+                <div class="graph-footer">
+                    <a href="https://github.com/yesshreyes" target="_blank" class="github-link">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio section-padding">
         <div class="container">
@@ -248,10 +276,7 @@
             
             <div class="portfolio-tabs">
                 <button class="tab-btn glass-card" data-tab="mobile">
-                    <i class="fas fa-mobile-alt"></i> Mobile
-                </button>
-                <button class="tab-btn glass-card" data-tab="other">
-                    <i class="fas fa-code"></i> Other
+                    <i class="fas fa-mobile-alt"></i> Project
                 </button>
                 <button class="tab-btn glass-card" data-tab="certification">
                     <i class="fas fa-certificate"></i> Certifications
@@ -297,7 +322,7 @@
                         <div class="project-tech">
                             <span>Kotlin</span>
                             <span>Jetpack Compose</span>
-                            <span>Firebase</span>
+                            <span>Ktlint</span>
                             <span>Retrofit</span>
                             <span>Room DB</span>
                         </div>
@@ -321,13 +346,84 @@
                         <div class="project-tech">
                             <span>Kotlin Multiplatform</span>
                             <span>Jetpack Compose</span>
-                            <span>Android Studio</span>
+                            <span>Koin</span>
+                            <span>Pagination</span>
+                            <span>Gemini Ai</span>
+                            <span>Konsist</span>
                         </div>
                         <div class="project-actions">
                             <a href="https://github.com/DevelopersBreach/kotlin-dictionary-multiplatform/releases/download/v0.1.0/app-release-v0.1.0.apk" download class="btn btn-primary glass-card">
                                 <i class="fas fa-download"></i> Download APK
                             </a>
                             <a href="https://github.com/DevelopersBreach/kotlin-dictionary-multiplatform" target="_blank" class="btn btn-secondary glass-card">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Smart Daily Expense Tracker App -->
+                <div class="project-card glass-card reveal-scale" data-category="mobile">
+                    <div class="project-info">
+                        <span class="project-tag">Mobile App</span>
+                        <h3>Daily Expense Tracker</h3>
+                        <p>Helps small business owners digitize daily expenses with fast capture, real-time totals, category filtering, 7-day analytics, and PDF/CSV export simulation.</p>
+                        <div class="project-tech">
+                            <span>Kotlin</span>
+                            <span>Jetpack Compose</span>
+                            <span>MVVM</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/yesshreyes/daily-expense-tracker/releases/download/v0.1.0/app.apk" download class="btn btn-primary glass-card">
+                                <i class="fas fa-download"></i> Download APK
+                            </a>
+                            <a href="https://github.com/yesshreyes/daily-expense-tracker" target="_blank" class="btn btn-secondary glass-card">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Gemini Chat Bot App -->
+                <div class="project-card glass-card reveal-scale" data-category="mobile">
+                    <div class="project-info">
+                        <span class="project-tag">Mobile App</span>
+                        <h3>Gemini Chat Bot</h3>
+                        <p>Built with Kotlin and Jetpack Compose, powered by the Gemini API for intelligent, context-aware text generation. Uses Android’s SpeechRecognizer for voice-to-text and handles real-time conversational state efficiently.</p>
+                        <div class="project-tech">
+                            <span>Kotlin</span>
+                            <span>Jetpack Compose</span>
+                            <span>Gemini AI API</span>
+                            <span>Speech-to-Text</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/yesshreyes/Voice-To-Text-Ai/releases/download/v1.0.0/gemini.apk" download class="btn btn-primary glass-card">
+                                <i class="fas fa-download"></i> Download APK
+                            </a>
+                            <a href="https://github.com/yesshreyes/Voice-To-Text-Ai" target="_blank" class="btn btn-secondary glass-card">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Listify App -->
+                <div class="project-card glass-card reveal-scale" data-category="mobile">
+                    <div class="project-info">
+                        <span class="project-tag">Mobile App</span>
+                        <h3>Listify</h3>
+                        <p>All-in-one list manager for everyday life. Stay productive and clutter-free with categories, search, and seamless CRUD operations. Features offline storage with Room Database for fast and reliable local data management.</p>
+                        <div class="project-tech">
+                            <span>Kotlin</span>
+                            <span>Jetpack Compose</span>
+                            <span>Room Database</span>
+                            <span>CRUD</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/yesshreyes/listify/releases/download/v0.1.0/v0.1.0.apk" download class="btn btn-primary glass-card">
+                                <i class="fas fa-download"></i> Download APK
+                            </a>
+                            <a href="https://github.com/yesshreyes/listify" target="_blank" class="btn btn-secondary glass-card">
                                 <i class="fab fa-github"></i> GitHub
                             </a>
                         </div>
