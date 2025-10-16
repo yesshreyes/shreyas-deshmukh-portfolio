@@ -15,15 +15,16 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', (req, res) => {
     res.render('index', {
         name: 'Shreyas Deshmukh',
-        title: 'Engineering student',
+        title: 'Android Developer',
         subtitle: 'Final-year Student',
-        description: 'Guess what? I love building mobile apps!',
+        description: 'I don’t push code, I Siuuu it to production',
         email: 'shreyesdeshmuk03@gmail.com',
         github: 'https://github.com/yesshreyes',
         linkedin: 'https://www.linkedin.com/in/shreyas-deshmukh-917b8020b/',
         googleDev: 'https://g.dev/shreyasdeshmukh',
-        profileImage: '/images/profile.jpg',
-        mobileDev: '/images/mobileapp.jpg',
+        leetcode: 'https://leetcode.com/u/yesshreyes/',
+        profileImage: '/images/about.jpg',
+        mobileDev: '/images/profile.jpg',
         resumePath: '/Resume.pdf'
     });
 });
