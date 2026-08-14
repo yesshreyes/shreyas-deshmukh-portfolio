@@ -24,7 +24,7 @@ app.get('/', (req, res) => {
         googleDev: 'https://g.dev/shreyasdeshmukh',
         leetcode: 'https://leetcode.com/u/yesshreyes/',
         profileImage: '/images/about.jpg',
-        mobileDev: '/images/profile.jpg',
+        mobileDev: '/images/profile.jpeg',
         resumePath: '/Resume.pdf'
     });
 });
